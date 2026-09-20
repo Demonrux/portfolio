@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дмитрий Ананьев — Портфолио</title>
+
+  <meta name="description" content="Портфолио Дмитрия Ананьева — full-stack разработчик, ML, .NET, Python, React" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-dot"></span>
+      <span>Demonrux</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about">Обо мне</a>
+      <a href="#experience">Опыт</a>
+      <a href="#education">Образование</a>
+      <a href="#stack">Стек</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Меню">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <div class="hero__photo">
+        <img src="assets/photo.jpg" alt="Дмитрий Ананьев" />
+      </div>
+      <div class="hero__text">
+        <div class="hero__badge">
+          <span class="dot"></span> Открыт к предложениям
+        </div>
+        <h1 class="hero__name">Дмитрий<br />Ананьев</h1>
+        <p class="hero__role">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero__desc">
+          3-й курс МГТУ им. Баумана — «Информационная аналитика и политические технологии».
+          Пишу бэкенды на .NET и Python, делаю ML-модели, собираю фронтенд на React.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <i class="fa-solid fa-rocket"></i> Проекты
+          </a>
+          <a href="mailto:demonrux201@gmail.com" class="btn btn--ghost">
+            <i class="fa-regular fa-envelope"></i> Написать
+          </a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/Demonrux" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://t.me/skebob_gg" target="_blank" rel="noopener" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://vk.com/ra_pa_pa_pam" target="_blank" rel="noopener" aria-label="VK">
+            <i class="fa-brands fa-vk"></i>
+          </a>
+          <a href="mailto:demonrux201@gmail.com" aria-label="Gmail">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section__head">
+      <span class="section__num">01</span>
+      <h2 class="section__title">Обо мне</h2>
+    </div>
+    <div class="about">
+      <div class="about__text">
+        <p>
+          Учусь на третьем курсе МГТУ им. Н.Э. Баумана по направлению
+          «Информационная аналитика и политические технологии».
+          Разрабатываю full-stack-приложения, интересуюсь машинным обучением
+          и анализом данных.
+        </p>
+        <p>
+          Люблю проекты, где нужно продумать архитектуру, а не просто «сделать, чтобы работало».
+          Использую паттерны проектирования, разделяю слои, пишу тесты.
+          В свободное время делаю игры и всякие мелкие утилиты.
+        </p>
+        <div class="about__facts">
+          <div class="fact">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <strong>МГТУ им. Баумана</strong>
+              <span>3 курс, бакалавриат</span>
+            </div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <strong>Full-stack</strong>
+              <span>.NET · Python · React</span>
+            </div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-brain"></i>
+            <div>
+              <strong>ML / Data</strong>
+              <span>CV · NLP · аналитика</span>
+            </div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-earth-europe"></i>
+            <div>
+              <strong>Москва</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="15" data-suffix="+">0</span>
+          <span class="stat__label">проектов</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="5">0</span>
+          <span class="stat__label">языков</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="2">0</span>
+          <span class="stat__label">года кода</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="1000" data-suffix="+">0</span>
+          <span class="stat__label">коммитов</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section__head">
+      <span class="section__num">02</span>
+      <h2 class="section__title">Опыт</h2>
+    </div>
+
+    <div class="experience">
+
+      <article class="exp reveal">
+        <div class="exp__logo">
+          <img src="assets/companies/qoollo.png" alt="Qoolo" />
+        </div>
+        <div class="exp__body">
+          <div class="exp__head">
+            <h3 class="exp__company">Группа компаний Qoolo</h3>
+            <span class="exp__date">Лето 2026</span>
+          </div>
+          <div class="exp__role">GameDev — практикант</div>
+          <p class="exp__desc">
+            Разработка игровых механик и прототипов. Работа с Unity и C#,
+            оптимизация производительности сцен,
+            интеграция UI через TextMeshPro.
+          </p>
+          <div class="exp__tags">
+            <span>Unity</span>
+            <span>C#</span>
+            <span>Git LFS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp reveal">
+        <div class="exp__logo">
+          <img src="assets/companies/analyst.png" alt="Аналитический центр" />
+        </div>
+        <div class="exp__body">
+          <div class="exp__head">
+            <h3 class="exp__company">Аналитический центр при Правительстве РФ</h3>
+            <span class="exp__date">Лето 2025</span>
+          </div>
+          <div class="exp__role">Отдел моделирования и макроэкономики — практикант</div>
+          <p class="exp__desc">
+            Работа с макроэкономическими данными, автоматизация обработки данных на Python.
+            Разработка внутреннего веб-приложения для работы с базой данных федеральных проектов.
+          </p>
+          <div class="exp__tags">
+            <span>Python</span>
+            <span>Django</span>
+            <span>FastAPI</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section__head">
+      <span class="section__num">03</span>
+      <h2 class="section__title">Образование</h2>
+    </div>
+
+    <div class="experience">
+
+      <article class="exp reveal">
+        <div class="exp__logo">
+          <img src="assets/companies/bauman.png" alt="МГТУ им. Н.Э. Баумана" />
+        </div>
+        <div class="exp__body">
+          <div class="exp__head">
+            <h3 class="exp__company">МГТУ им. Н.Э. Баумана</h3>
+            <span class="exp__date">2024 — 2028</span>
+          </div>
+          <div class="exp__role">
+            Информационная аналитика и политические технологии — бакалавриат
+          </div>
+          <p class="exp__desc">
+            Подготовка по программированию, алгоритмам и структурам данных,
+            математическому анализу, теории вероятностей и статистике.
+            Проектная работа, объектно-ориентированное программирование, базы данных,
+            машинное обучение и анализ социальных данных.
+          </p>
+          <div class="exp__tags">
+            <span>Алгоритмы</span>
+            <span>ООП</span>
+            <span>Базы данных</span>
+            <span>ML</span>
+            <span>Аналитика</span>
+            <span>Социальная и политическая сфера</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section__head">
+      <span class="section__num">04</span>
+      <h2 class="section__title">Технологии</h2>
+    </div>
+    <div class="stack">
+      <div class="stack__group reveal">
+        <h3><i class="fa-solid fa-code"></i> Языки</h3>
+        <div class="stack__items">
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+          <span class="chip">C++</span>
+          <span class="chip">C</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="stack__group reveal">
+        <h3><i class="fa-solid fa-server"></i> Backend</h3>
+        <div class="stack__items">
+          <span class="chip">ASP.NET Core</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Django</span>
+          <span class="chip">EF Core</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">SQLite</span>
+        </div>
+      </div>
+      <div class="stack__group reveal">
+        <h3><i class="fa-solid fa-palette"></i> Frontend</h3>
+        <div class="stack__items">
+          <span class="chip">React</span>
+          <span class="chip">Vite</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">Bootstrap</span>
+          <span class="chip">Chart.js</span>
+        </div>
+      </div>
+      <div class="stack__group reveal">
+        <h3><i class="fa-solid fa-brain"></i> ML & Data</h3>
+        <div class="stack__items">
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">Transformers</span>
+          <span class="chip">pandas</span>
+        </div>
+      </div>
+      <div class="stack__group reveal">
+        <h3><i class="fa-solid fa-toolbox"></i> DevOps & Tools</h3>
+        <div class="stack__items">
+          <span class="chip">Docker</span>
+          <span class="chip">Git</span>
+          <span class="chip">Nginx</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Qt</span>
+          <span class="chip">Unity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section__head">
+      <span class="section__num">05</span>
+      <h2 class="section__title">Проекты</h2>
+    </div>
+
+    <div class="projects">
+
+      <article class="project project--featured reveal">
+        <div class="project__image">
+          <img src="assets/projects/studentcouncil.png" alt="" />
+        </div>
+        <div class="project__body">
+          <div class="project__meta">
+            <span class="project__category">Full-stack</span>
+            <span class="project__year">2026</span>
+          </div>
+          <h3 class="project__title">Платформа студсовета СГН</h3>
+          <p class="project__desc">
+            Веб-приложение для управления студенческим советом:
+            учёт участников, мероприятия, бейджи, система уровней и баллов.
+            Задеплоено на VPS, домен studsovetsgn.ru, HTTPS через Let's Encrypt.
+          </p>
+          <div class="project__stack">
+            <span>ASP.NET Core 8</span>
+            <span>React 19</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>Identity + 2FA</span>
+          </div>
+          <div class="project__links">
+            <a href="https://studsovetsgn.ru" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть сайт
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="projects__grid">
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/ai-detection.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">ML / CV</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">AI Image Detector</h3>
+            <p class="project__desc">
+              Детектор изображений, сгенерированных нейросетями (Midjourney, SD, DALL-E).
+              Вейвлет-преобразование + Random Forest, ансамбль моделей.
+            </p>
+            <div class="project__stack">
+              <span>Python</span><span>PyWavelets</span><span>scikit-learn</span><span>CLIP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+           <div class="project__image">
+            <img src="assets/projects/social-analyzer.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">ML / NLP</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Social Posts Analyzer</h3>
+            <p class="project__desc">
+              Сбор, классификация и визуализация постов из Telegram-каналов.
+              Zero-Shot классификация через mDeBERTa-v3, тематические графики.
+            </p>
+            <div class="project__stack">
+              <span>Python</span><span>Telethon</span><span>Transformers</span><span>matplotlib</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/fractalis.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Game Dev</span>
+              <span class="project__year">2026</span>
+            </div>
+            <h3 class="project__title">Fractalis</h3>
+            <p class="project__desc">
+              3D-головоломка от первого лица в научно-фантастическом комплексе.
+              Апробация метода фрактальных операторов через игровые механики.
+            </p>
+            <div class="project__stack">
+              <span>Unity</span><span>C#</span><span>URP</span><span>Git LFS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/gasStation.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">.NET</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Gas Station Simulation</h3>
+            <p class="project__desc">
+              Многопоточное моделирование АЗС с async/await, Worker Pool,
+              Observer и Strategy. Гибкая конфигурация через CSV.
+            </p>
+            <div class="project__stack">
+              <span>.NET</span><span>Async/Await</span><span>ConcurrentQueue</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/demograp.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">.NET</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Демографическое моделирование</h3>
+            <p class="project__desc">
+              Вероятностная симуляция населения: рождаемость, смертность, миграция.
+              Событийная архитектура, масштабирование 1 объект = 1000 человек.
+            </p>
+            <div class="project__stack">
+              <span>.NET</span><span>CSV</span><span>Jupyter</span><span>События</span>
+            </div>       
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/datasearch.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Backend</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Django + FastAPI Search</h3>
+            <p class="project__desc">
+              Поиск и анализ данных в PostgreSQL через веб-интерфейс.
+              Django — фронт, FastAPI — асинхронный API для запросов к БД.
+            </p>
+            <div class="project__stack">
+              <span>Django</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span>
+            </div>         
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/demogRus.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Data Science</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Демография России (Qt)</h3>
+            <p class="project__desc">
+              Десктопное приложение на Qt для визуализации демографических данных
+              из CSV: фильтрация, графики, статистика.
+            </p>
+            <div class="project__stack">
+              <span>C++17</span><span>Qt 6</span><span>MVC</span><span>CMake</span>
+            </div>       
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/terrarianRend.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Desktop</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Визуализация 3D-поверхности</h3>
+            <p class="project__desc">
+              Qt-приложение для загрузки матрицы высот из CSV и отображения
+              3D-поверхности с поворотами, сдвигами и масштабированием.
+            </p>
+            <div class="project__stack">
+              <span>C++17</span><span>Qt</span><span>Facade</span><span>4×4 матрицы</span>
+            </div>      
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/math.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Desktop</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Калькулятор на Qt</h3>
+            <p class="project__desc">
+              Калькулятор с графическим интерфейсом на C++ и Qt. Поддержка арифметики,
+              тригонометрии, скобок и унарного минуса. Shunting-yard + паттерны
+              Command и Facade.
+            </p>
+            <div class="project__stack">
+              <span>C++17</span><span>Qt 5</span><span>Command</span><span>Facade</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/numxonv.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Desktop</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Конвертер систем счисления</h3>
+            <p class="project__desc">
+              Qt-приложение для конвертации между системами от 2 до 36.
+              Поддержка дополнительного кода для отрицательных чисел,
+              валидация ввода, обмен системами.
+            </p>
+            <div class="project__stack">
+              <span>C++17</span><span>Qt</span><span>Windows API</span><span>strtol</span>
+            </div>   
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/tiketBooking.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">.NET</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Ticket Booking System</h3>
+            <p class="project__desc">
+              Консольная система управления билетами на выставки.
+              CRUD-операции для посетителей, выставок и билетов плюс
+              аналитика на EF Core и PostgreSQL.
+            </p>
+            <div class="project__stack">
+              <span>.NET 6</span><span>EF Core</span><span>PostgreSQL</span><span>Facade</span>
+            </div>
+ 
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/classtering.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">Data Science</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Кластеризация данных</h3>
+            <p class="project__desc">
+              Сравнение трёх алгоритмов кластеризации: K-means, иерархическая
+              (Ward) и DBSCAN. Стандартизация данных, визуализация через matplotlib,
+              определение шумовых точек.
+            </p>
+            <div class="project__stack">
+              <span>Python</span><span>scikit-learn</span><span>scipy</span><span>matplotlib</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__image">
+            <img src="assets/projects/scraping.png" alt="" />
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="project__category">.NET</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">GitHub API & Web Scraper</h3>
+            <p class="project__desc">
+              Консольное приложение для работы с GitHub API и веб-скраппинга
+              с сохранением результатов в SQLite через EF Core.
+              Извлечение заголовков, ссылок, мета-данных страниц.
+            </p>
+            <div class="project__stack">
+              <span>.NET</span><span>EF Core</span><span>SQLite</span><span>HtmlAgilityPack</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section__head">
+      <span class="section__num">06</span>
+      <h2 class="section__title">Контакты</h2>
+    </div>
+    <div class="contact">
+      <p class="contact__lead">
+        Открыт для стажировок, фриланса и интересных проектов.<br />
+      </p>
+      <div class="contact__grid">
+        <a href="mailto:demonrux201@gmail.com" class="contact__card">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="contact__label">Email</span>
+          <span class="contact__value">demonrux201@gmail.com</span>
+        </a>
+        <a href="https://t.me/skebob_gg" target="_blank" rel="noopener" class="contact__card">
+          <i class="fa-brands fa-telegram"></i>
+          <span class="contact__label">Telegram</span>
+          <span class="contact__value">@skebob_gg</span>
+        </a>
+        <a href="https://github.com/Demonrux" target="_blank" rel="noopener" class="contact__card">
+          <i class="fa-brands fa-github"></i>
+          <span class="contact__label">GitHub</span>
+          <span class="contact__value">github.com/Demonrux</span>
+        </a>
+        <a href="https://vk.com/ra_pa_pa_pam" target="_blank" rel="noopener" class="contact__card">
+          <i class="fa-brands fa-vk"></i>
+          <span class="contact__label">VK</span>
+          <span class="contact__value">vk.com/ra_pa_pa_pam</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 Дмитрий Ананьев</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
