@@ -672,6 +672,21 @@ body::before {
   transform: translateY(0);
 }
 
+.hero__badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.hero__badge--rank {
+  background: rgba(255, 215, 0, .1);
+  border-color: rgba(255, 215, 0, .35);
+  color: #ffd700;
+}
+.hero__badge--rank i {
+  font-size: .85rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; }
   *, *::before, *::after { animation-duration: .01ms !important; }
@@ -990,3 +1005,4 @@ body::before {
     line-height: 1;
   }
 }
+
