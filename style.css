@@ -878,3 +878,115 @@ body::before {
     height: 72px;
   }
 }
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --bg-2: #f5f7fa;
+    --panel: #ffffff;
+    --panel-2: #f0f3f7;
+    --border: #d5dce5;
+    --border-2: #b8c2cf;
+    --text: #14181d;
+    --text-dim: #3d4a58;
+    --text-mute: #6b7a8a;
+    --accent: #0a8f7a;
+    --accent-soft: rgba(10, 143, 122, .08);
+    --accent-glow: rgba(10, 143, 122, .2);
+  }
+
+  body::before { display: none; }
+
+  .project,
+  .exp,
+  .stack__group,
+  .fact,
+  .stat,
+  .contact__card,
+  .hero,
+  .section__head,
+  .about__facts,
+  .about__stats,
+  .projects__grid > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .section__head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+  }
+
+  .reveal { opacity: 1 !important; transform: none !important; }
+  * { animation: none !important; transition: none !important; }
+  .hero__role .cursor { display: none; }
+
+  .nav {
+    position: static !important;
+    background: none !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav__toggle { display: none !important; }
+  .nav__links {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    flex-direction: row !important;
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  .project, .exp, .fact, .stat, .contact__card, .stack__group {
+    box-shadow: none !important;
+  }
+  .project:hover, .exp:hover, .fact:hover { transform: none !important; }
+
+  .section { padding: 24px 0; }
+  .section__head { margin-bottom: 24px; padding-bottom: 12px; }
+  .hero { padding: 20px 0; min-height: auto; }
+
+  p, li { orphans: 3; widows: 3; }
+
+  .footer { break-before: avoid; page-break-before: avoid; }
+
+  #contact {
+    break-before: page;
+    page-break-before: always;
+  }
+
+   #stack,
+  #contact {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .section__head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .footer {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  .stat__num {
+    font-size: 0 !important;   /* прячем «0» из DOM */
+    color: var(--accent);
+  }
+  .stat__num::before {
+    content: attr(data-count) attr(data-suffix);
+    font-size: 2.4rem;         /* возвращаем размер */
+    font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -.03em;
+    line-height: 1;
+  }
+}
