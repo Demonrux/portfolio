@@ -60,7 +60,6 @@ body::before {
   z-index: -1;
 }
 
-/* ===== NAV ===== */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -131,7 +130,6 @@ body::before {
   cursor: pointer;
 }
 
-/* ===== HERO ===== */
 .hero {
   position: relative;
   min-height: auto;
@@ -290,7 +288,6 @@ body::before {
   box-shadow: 0 8px 20px rgba(12, 191, 161, .2);
 }
 
-/* ===== SECTION ===== */
 .section {
   padding: 30px 32px;
   max-width: var(--container);
@@ -318,7 +315,6 @@ body::before {
   letter-spacing: -.02em;
 }
 
-/* ===== ABOUT ===== */
 .about {
   display: grid;
   grid-template-columns: 1fr;
@@ -369,7 +365,6 @@ body::before {
   color: var(--text-mute);
 }
 
-/* ===== STACK ===== */
 .stack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -416,7 +411,6 @@ body::before {
   border-color: var(--accent);
 }
 
-/* ===== PROJECTS ===== */
 .projects { display: flex; flex-direction: column; gap: 32px; }
 .projects__grid {
   display: grid;
@@ -542,7 +536,6 @@ body::before {
 .project--featured .project__title { font-size: 1.9rem; }
 .project--featured .project__desc { font-size: 1rem; }
 
-/* ===== CONTACT ===== */
 .contact__lead {
   font-size: 1.1rem;
   color: var(--text-dim);
@@ -588,7 +581,6 @@ body::before {
   word-break: break-word;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   padding: 40px 32px;
   text-align: center;
@@ -601,7 +593,6 @@ body::before {
   flex-wrap: wrap;
 }
 
-/* ===== REVEAL ===== */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -612,7 +603,6 @@ body::before {
   transform: translateY(0);
 }
 
-/* ===== HERO BADGES ===== */
 .hero__badges {
   display: flex;
   gap: 10px;
@@ -633,7 +623,6 @@ body::before {
   *, *::before, *::after { animation-duration: .01ms !important; }
 }
 
-/* ===== EXPERIENCE / EDUCATION ===== */
 .experience {
   position: relative;
   display: flex;
@@ -785,7 +774,6 @@ body::before {
   box-shadow: 0 4px 12px var(--accent-glow);
 }
 
-/* ===== MEDIA 960 ===== */
 @media (max-width: 960px) {
   .nav { padding: 0 20px; }
 
@@ -829,7 +817,6 @@ body::before {
   .project--featured .project__title { font-size: 1.5rem; }
 }
 
-/* ===== MEDIA 720 ===== */
 @media (max-width: 720px) {
   .experience { padding-left: 0; }
   .experience::before { display: none; }
@@ -844,13 +831,11 @@ body::before {
   }
 }
 
-/* ===== MEDIA 480 ===== */
 @media (max-width: 480px) {
   .hero__name { font-size: 2.4rem; }
   .btn { padding: 12px 20px; font-size: .9rem; }
 }
 
-/* ===== PRINT ===== */
 @media print {
   :root {
     --bg: #ffffff;
@@ -867,41 +852,42 @@ body::before {
     --accent-glow: rgba(10, 143, 122, .2);
   }
 
-  body::before { display: none; }
+  body::before,
+  .hero__bg,
+  .hero__photo::before,
+  .nav__logo-dot { display: none !important; }
 
-  .project,
-  .exp,
-  .stack__group,
-  .fact,
-  .contact__card,
-  .hero,
-  .section__head,
-  .about__facts,
-  .projects__grid > * {
+  * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+  
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .project:hover, .exp:hover, .fact:hover,
+  .stack__group:hover, .contact__card:hover,
+  .hero__socials a:hover, .stat:hover { transform: none !important; }
+
+  .project, .exp, .stack__group, .fact, .stat,
+  .contact__card, .hero, .section__head,
+  .about__facts, .projects__grid > * {
     break-inside: avoid;
     page-break-inside: avoid;
   }
-
-  .section__head {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  h1, h2, h3, h4 {
-    break-after: avoid;
-    page-break-after: avoid;
-    break-inside: avoid;
-  }
-
-  .reveal { opacity: 1 !important; transform: none !important; }
-  * { animation: none !important; transition: none !important; }
-  .hero__role .cursor { display: none; }
+  .section__head { break-after: avoid; page-break-after: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; break-inside: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  .footer { break-before: avoid; page-break-before: avoid; }
+  
+  #stack, #contact { break-before: page; page-break-before: always; }
 
   .nav {
     position: static !important;
     background: none !important;
     backdrop-filter: none !important;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border) !important;
+    padding: 8px 0 !important;
+    height: auto !important;
   }
   .nav__toggle { display: none !important; }
   .nav__links {
@@ -909,26 +895,161 @@ body::before {
     position: static !important;
     transform: none !important;
     flex-direction: row !important;
+    flex-wrap: wrap !important;
     background: none !important;
     padding: 0 !important;
+    gap: 14px !important;
   }
-
-  .project, .exp, .fact, .contact__card, .stack__group {
-    box-shadow: none !important;
-  }
-  .project:hover, .exp:hover, .fact:hover { transform: none !important; }
+  .nav__links a { font-size: 0.85rem !important; }
+  .nav__links a::after { display: none !important; } 
 
   .section { padding: 24px 0; }
-  .section__head { margin-bottom: 24px; padding-bottom: 12px; }
+  .section__head { margin-bottom: 20px; padding-bottom: 10px; }
   .hero { padding: 20px 0; min-height: auto; }
+  .hero__content {
+    grid-template-columns: 170px 1fr !important;
+    gap: 28px !important;
+    text-align: left !important;
+  }
+  .hero__photo {
+    max-width: 170px !important;
+    margin: 0 !important;
+    border: 1px solid var(--border) !important;
+  }
+  .about { grid-template-columns: 1fr !important; gap: 20px !important; }
 
-  p, li { orphans: 3; widows: 3; }
+  .hero__role #typewriter { display: none !important; }
+  .hero__role::before {
+    content: "Full-stack разработчик · .NET · Python · React · ML";
+  }
+  .hero__role .cursor { display: none !important; }
 
-  .footer { break-before: avoid; page-break-before: avoid; }
+  .hero__actions { display: none !important; }
 
-  #stack,
-  #contact {
-    break-before: page;
-    page-break-before: always;
+  .hero__badge {
+    background: none !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-dim) !important;
+    padding: 3px 10px !important;
+  }
+  .hero__badge--rank {
+    border-color: var(--border) !important;
+    color: var(--text-dim) !important;
+  }
+  .hero__badge .dot { display: none !important; }
+
+  .hero__socials {
+    display: flex !important;
+    gap: 18px !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+  }
+  .hero__socials a {
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: var(--text-dim) !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+  }
+  .hero__socials a i { display: none !important; }
+  .hero__socials a::after {
+    content: attr(aria-label) ": " attr(href);
+    color: var(--accent);
+    font-weight: 400;
+    word-break: break-all;
+  }
+  .hero__socials a[href^="mailto:"]::after {
+    content: "Gmail: " attr(href);
+  }
+
+  i[class*="fa-"] { display: none !important; } 
+  
+  .fact i,
+  .stack__group h3 i,
+  .contact__card i {
+    display: inline-block !important;
+    color: var(--accent) !important;
+  }
+  .fact i { font-size: 1.3rem !important; }
+  .stack__group h3 i { margin-right: 6px !important; }
+  .contact__card i { font-size: 1.3rem !important; margin-bottom: 4px !important; }
+
+  .exp__link {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 0.85rem !important;
+    color: var(--text-dim) !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--accent) !important;
+    margin-top: 4px !important;
+  }
+  .exp__link::after {
+    content: " — " attr(href);
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+  }
+
+  .project__links {
+    border-top: 1px solid var(--border) !important;
+    padding-top: 8px !important;
+    gap: 10px !important;
+  }
+  .project__links a {
+    color: var(--text-dim) !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--accent) !important;
+  }
+  .project__links a::after {
+    content: " (" attr(href) ")";
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+    word-break: break-all;
+  }
+
+  /* ===== Плашки и теги ===== */
+  .chip,
+  .project__stack span,
+  .exp__tags span,
+  .exp__date {
+    background: none !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-dim) !important;
+    font-weight: 400 !important;
+  }
+  .contact__card {
+    background: none !important;
+    border: 1px solid var(--border) !important;
+    padding: 12px !important;
+    gap: 2px !important;
+  }
+
+  /* ===== Счётчики (data-count) ===== */
+  .stat__num {
+    font-size: 0 !important;
+    color: var(--accent);
+  }
+  .stat__num::before {
+    content: attr(data-count) attr(data-suffix);
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -.03em;
+    line-height: 1;
+  }
+
+    .hero__socials a::after,
+  .exp__link,
+  .exp__link::after,
+  .project__links a,
+  .project__links a::after {
+    font-size: 10pt !important;
   }
 }
